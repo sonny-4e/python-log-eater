@@ -1,11 +1,25 @@
+import re
+
 def parse_logs(file_path):
     """Funkcja do analizy pliku z logami."""
+    
+    # Kompilujemy wzorzec (Regex)
+    log_pattern = re.compile(r'^(\S+).*?"\s+(\d{3})')
+    
     try:
-        # Używamy bloku 'with', aby plik automatycznie zamknął się po zakończeniu czytania
+        #  bloku 'with', aby plik automatycznie zamknął się po zakończeniu czytania
         with open(file_path, 'r') as file:
             for line in file:
-                # .strip() usuwa białe znaki z początku i końca (np. znak nowej linii \n)
-                print(line.strip()) 
+                
+                match = log_pattern.search(line)
+                
+                if match:
+                    ip_address = match.group(1)
+                    status_code = match.group(2)
+
+                    print(f"Znaleziono -> IP: {ip_address} | Status: {status_code}")
+                
+                              
     except FileNotFoundError:
         print(f"Błąd: Nie znaleziono pliku {file_path}")
 
