@@ -37,6 +37,6 @@ def parse_logs(file_path):
 
 if __name__ == "__main__":
     # Punkt wejścia naszego skryptu
-    log_file = "access.log"
+    log_file = "logs/access.log"
     print(f"--- Rozpoczynam analizę pliku: {log_file} ---")
     parse_logs(log_file)
