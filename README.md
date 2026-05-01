@@ -19,8 +19,8 @@ This project serves as a practical exercise in scripting for DevOps, focusing on
 
 ## 📅 Planned Roadmap
 - [x] Add `collections.Counter` to generate a summary report of HTTP status codes.
-- [ ] Containerize the application using Docker (`Dockerfile`).
-- [ ] Implement Docker Volumes to read log files from the host machine securely.
+- [x] Containerize the application using Docker (`Dockerfile`).
+- [x] Implement Docker Volumes to read log files from the host machine securely.
 
 ## 💻 How to run locally (Current version)
 
