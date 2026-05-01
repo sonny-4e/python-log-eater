@@ -18,7 +18,7 @@ This project serves as a practical exercise in scripting for DevOps, focusing on
 * Uses Regular Expressions (Regex) to extract client IP addresses and HTTP response codes.
 
 ## 📅 Planned Roadmap
-- [ ] Add `collections.Counter` to generate a summary report of HTTP status codes.
+- [x] Add `collections.Counter` to generate a summary report of HTTP status codes.
 - [ ] Containerize the application using Docker (`Dockerfile`).
 - [ ] Implement Docker Volumes to read log files from the host machine securely.
 
